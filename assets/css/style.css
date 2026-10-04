@@ -1,0 +1,165 @@
+
+:root {
+    --primary-color: rgb(248, 7, 19);
+    --primary-hover-color: rgb(193,17,25);
+    --sec-color:#212529;
+    --color-white:#fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.net-primary-btn{
+    background-color: var(--primary-color);
+    color:var(--color-white);
+}
+
+.net-primary-btn:hover{
+    background-color: var(--primary-hover-color);
+    color:var(--color-white)
+}
+
+.net-sec-btn{
+    background-color: var(--sec-color);
+    color:var(--color-white);
+}
+
+.net-sec-btn:hover{
+    background-color: var(--sec-color);
+    color:var(--color-white)
+}
+
+.logo{
+    width: 150px;
+}
+body{
+    position:relative;
+}
+
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.85) 3%,
+      rgba(0, 0, 0, 0.8465) 11.08%,
+      rgba(0, 0, 0, 0.8361) 19.17%,
+      rgba(0, 0, 0, 0.8187) 27.25%,
+      rgba(0, 0, 0, 0.7944) 35.33%,
+      rgba(0, 0, 0, 0.7632) 43.42%,
+      rgba(0, 0, 0, 0.725) 51.5%,
+      rgba(0, 0, 0, 0.6868) 59.58%,
+      rgba(0, 0, 0, 0.6556) 67.67%,
+      rgba(0, 0, 0, 0.6313) 75.75%,
+      rgba(0, 0, 0, 0.6139) 83.83%,
+      rgba(0, 0, 0, 0.6035) 91.92%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),url(../images/background-image.jpg);
+    background-attachment: fixed;
+    filter: blur(2px);
+}
+
+#addmoviebtn{
+    padding: 10px;
+    font-size: 18px; 
+}
+
+.moviecard{
+    background-color: rgb(0,0,0,0.7);
+    color:var(--color-white);
+    transition:all .2s ease-in;
+}
+
+.moviecard:hover{
+    box-shadow: 0px 0px 12px rgb(121,121,121);
+    transform: translateY(-3px);
+}
+.movieTitle{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.moviecard figure{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.moviecard figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+figcaption{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 70%;
+   top: 30%;
+   background-color: rgba(0, 0, 0, 0.8);
+   overflow-y: auto;
+   padding: 20px;
+   transform: translateY(115%);
+   transition: all 0.5s ease-in-out; 
+   
+}
+
+.moviecard:hover figcaption,
+.moviecard:active figcaption,
+.moviecard:focus figcaption{
+    transform: translateY(0);
+}
+
+
+#movieform{
+    position: fixed;
+    top: 15%;
+    left: 20%;
+    width:60%;
+}
+
+.backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#movieform{
+    display: none;
+}
+
+.backdrop.active{
+    display: block;
+}
+
+#movieform.active{
+    display: block;
+}
+
+.spinner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(255,255,255,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

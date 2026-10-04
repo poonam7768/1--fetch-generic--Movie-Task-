@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Task Using APIs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+
+
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-6">
+            <a href="index.html">
+              <img src="./assets/images/logo-img.png" alt="logo" class="bg-dark logo">
+            </a>
+        </div>
+        <div class="col-6 text-right">
+            <button id="addmoviebtn" class="btn btn-sm net-primary-btn">Add Movies +</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row mt-5" id="moviecontainer">
+        <!-- <div class="col-md-4 mb-4">
+           <div class="card moviecard">
+             <div class="card-header d-flex justify-content-between">
+                <h4 class="movieTitle">Barfi</h4>
+                <h5><span class="badge badge-success">5</span></h5>
+            </div>
+            <div class="card-body">
+                <figure class="py-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm_Pr1SBpBXUtlwocEhDfnQmuSzs4AvQAtW2cu8wLYsg&s=10" alt="">
+                    <figcaption>
+                        <h5> Barfi</h5>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm net-sec-btn">Edit</button>
+                <button class="btn btn-sm net-primary-btn">Delete</button>
+            </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<div class="backdrop closeform" id="backdrop"></div>
+<form id="movieform">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between">
+            <h4>Add Movies</h4>
+            <i role="button" id="closeform" class="fa-solid fa-xmark fa-2x closeform"></i>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="movieName">Enter Movie Name</label>
+                <input type="text" required id="movieName" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="movieImg">Enter Movie URL</label>
+                <input type="text" required id="movieImg" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="movieImg">Enter Movie Discription</label>
+                <textarea type="text" required id="moviediscription" rows="4" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="movieRating">Give Rating</label>
+                <select id="movieRating" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <button type="submit" id="movieAddbtn" class="btn btn-sm net-sec-btn">Add Movie</button>
+            <button type="button" id="updateMoviebtn" class="btn btn-sm net-sec-btn d-none">update Movie </button>
+            <button type="button" class="btn btn-sm net-primary-btn closeform">cancle</button>
+        </div>
+    </div>
+</form>
+
+
+<div class="spinner d-none" id="spinner">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+   </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
