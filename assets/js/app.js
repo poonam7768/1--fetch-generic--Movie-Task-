@@ -178,7 +178,9 @@ function onAddMovies(eve){
      </div>
      </div>
                         `;
+
          moviecontainer.prepend(col)
+         onMovieformToggel()
          snackBar(`new movie added successfully!!`,'success')
       })
       .catch(err => {
